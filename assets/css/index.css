@@ -1,0 +1,154 @@
+/* font poppins and urbanist */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* common styles */
+:root {
+    --primary--color: #00668D;
+}
+
+.hero {
+    position: relative;
+    height: 100%;
+    background: url("../images/home-banner.png") no-repeat center center;
+    background-size: cover;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero>* {
+    position: relative;
+    z-index: 2;
+}
+
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+}
+
+.logo p {
+    color: var(--Primary, #00668D);
+    font-family: "Russo One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+    /* 63.36px */
+    letter-spacing: -0.96px;
+}
+
+/* Middle: Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--Text-Heading, #1E1E1E);
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+.nav-links a:hover {
+    color: var(--primary--color);
+}
+
+/* Right: Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.signin-btn,
+.signup-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+.signin-btn {
+    border: 1px solid #FFB222;
+    color: #1E1E1E;
+}
+
+.signup-btn {
+    background: #FFB222;
+    color: #000;
+}
+
+/* booking btn */
+.booking-btn {
+    text-transform: capitalize;
+    border-radius: 10px;
+    background: var(--primary--color);
+    padding: 23px 84px;
+    color: #FFF;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+/* hero section styles */
+.hero {
+    padding-block: 231px 266px;
+}
+
+.hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    max-width: 1488px;
+    width: 100%;
+    color: var(--60-background-white, #fff);
+    font-family: Urbanist;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 112%;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.hero-content p {
+    text-align: center;
+    max-width: 748px;
+    width: 100%;
+    color: var(--60-background-white, #fff);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 164%;
+    margin-bottom: 72px;
+}
