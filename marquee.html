@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seamless Marquee</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .marquee-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .marquee {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+
+    .marquee-content {
+      display: flex;
+    }
+
+    .review-card {
+      flex: 0 0 auto;
+      width: 250px;
+      margin: 0 10px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .review-card img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .review-card h4 {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .review-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee-container">
+    <div class="marquee">
+      <div class="marquee-content">
+        <!-- Original Content -->
+        <div class="review-card">
+          <img src="https://avatar.vercel.sh/jack" alt="Jack">
+          <h4>Jack</h4>
+          <p>@jack</p>
+          <blockquote>Amazing work! Highly recommend.</blockquote>
+        </div>
+        <div class="review-card">
+          <img src="https://avatar.vercel.sh/jill" alt="Jill">
+          <h4>Jill</h4>
+          <p>@jill</p>
+          <blockquote>Great experience! Will use again.</blockquote>
+        </div>
+        <div class="review-card">
+          <img src="https://avatar.vercel.sh/jane" alt="Jane">
+          <h4>Jane</h4>
+          <p>@jane</p>
+          <blockquote>Simply outstanding service.</blockquote>
+        </div>
+        <!-- Duplicated Content -->
+        <div class="review-card">
+          <img src="https://avatar.vercel.sh/jack" alt="Jack">
+          <h4>Jack</h4>
+          <p>@jack</p>
+          <blockquote>Amazing work! Highly recommend.</blockquote>
+        </div>
+        <div class="review-card">
+          <img src="https://avatar.vercel.sh/jill" alt="Jill">
+          <h4>Jill</h4>
+          <p>@jill</p>
+          <blockquote>Great experience! Will use again.</blockquote>
+        </div>
+        <div class="review-card">
+          <img src="https://avatar.vercel.sh/jane" alt="Jane">
+          <h4>Jane</h4>
+          <p>@jane</p>
+          <blockquote>Simply outstanding service.</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,506 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap');
+
+/* common styles */
+:root {
+    --primary--color: #00668D;
+    --title--color: #1E1E1E;
+}
+
+.title {
+    color: var(--title--color);
+    font-family: Rubik;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.description {
+    color: #4F4F4F;
+    font-family: Roboto;
+    line-height: 150%;
+}
+
+.tiny-title {
+    color: var(--Primary, #00668D);
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+
+.container {
+    max-width: 1600px !important;
+    margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+}
+
+.logo p {
+    color: var(--Primary, #00668D);
+    font-family: "Russo One";
+    font-size: 48px;
+    line-height: 132%;
+    letter-spacing: -0.96px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--Text-Heading, #1E1E1E);
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+.nav-links a:hover {
+    color: var(--primary--color);
+}
+
+/* Right: Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.signin-btn,
+.signup-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+.signin-btn {
+    border: 1px solid #FFB222;
+    color: #1E1E1E;
+}
+
+.signup-btn {
+    background: #FFB222;
+    color: #000;
+}
+
+/* booking btn */
+.booking-btn {
+    text-transform: capitalize;
+    border-radius: 10px;
+    background: var(--primary--color);
+    padding: 23px 84px;
+    color: #FFF;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+/* hero section styles */
+.hero {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url("../images/project-banner.png") no-repeat center center;
+    background-size: cover;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.76);
+    z-index: 1;
+}
+
+.hero-content {
+    padding: 142px 113px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    max-width: 1154px;
+    color: var(--60-background-white, #FFF);
+    font-family: Rubik, sans-serif;
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.hero-content p {
+    max-width: 952px;
+    ;
+    color: var(--60-background-white, #FFF);
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    line-height: 164%;
+    margin-bottom: 72px;
+    text-align: center;
+}
+
+
+/* overview container styles */
+.overview-container {
+    padding: 150px;
+}
+
+.overview-heading {
+    padding-bottom: 80px;
+}
+
+.overview-heading h1,
+p {
+    text-align: center;
+}
+
+.overview-heading h1 {
+    padding-bottom: 24px;
+}
+
+.overview-cards {
+    display: flex;
+    gap: 40px;
+}
+
+.overview-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--Primary, #00668D);
+    color: var(--60-background-white, #FFF);
+    padding: 40px;
+}
+.overview-content .location img{
+     
+}
+
+.overview-content h1 {
+
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    padding-bottom: 8px;
+}
+
+.overview-content .address {
+    font-family: Roboto;
+    line-height: 150%;
+    padding-bottom: 8px;
+}
+
+.overview-content .outcome {
+    color: var(--6030-light-neutrals-02, #F4F5F7);
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+    padding-bottom: 16px;
+}
+.overview-img {
+    position: relative;
+    width: 100%; /* Ensure the container is responsive */
+    height: auto; /* Maintain aspect ratio of the image */
+}
+
+.before-renovation,
+.after-renovation {
+    position: absolute;
+    border-radius: 4px;
+background: var(--Foundation-Blue-Primary-Light, #E8F1F3);
+    color: var(--Text-Heading, #1E1E1E);
+font-family: Rubik;
+padding: 12px 24px;
+font-size: 24px;
+font-weight: 600;
+line-height: 150%; 
+}
+
+.before-renovation {
+    bottom: 32px; 
+    left: 134px; 
+}
+
+.after-renovation {
+    bottom: 32px; 
+    right: 134px; 
+}
+
+.overview-cards .overview-img img {
+    width: 1043px;
+    height: 500px;
+    border-radius: 12px;
+}
+
+/* highlights styles */
+.highlights-cards {
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+}
+
+.highlights-cards .scope {
+    border-radius: 12px;
+    background: #E6E6F9;
+    padding: 40px 24px;
+}
+
+.highlights-cards .challenges {
+    border-radius: 12px;
+    background: #FCE7F2;
+    padding: 40px 24px;
+}
+
+.highlights-cards .outcome {
+    border-radius: 12px;
+    background: #E8F1F3;
+    padding: 40px 24px;
+}
+
+.icon-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+
+
+.icon-header h2 {
+    color: var(--Text-Heading, #1E1E1E);
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+/* transformation section styles */
+.transformation-container {
+
+    margin-bottom: 150px;
+}
+
+.tranformation-heading {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.tranformation-heading p {
+    max-width: 1060px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+.transformation-images img {
+    max-width: 788px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+}
+
+.transformation-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* responsive style of employer services */
+
+@media only screen and (min-width: 1600px) {}
+
+/* laptop devices */
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {}
+
+/* large tablet devices */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* medium tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* small tablet devices */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* large mobile devices */
+@media only screen and (max-width: 575px) {
+    .title {
+        font-size: 24px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+
+    /* Hide the navigation on small screens */
+    .logo img {
+        width: 138px;
+        height: 28px;
+    }
+    .logo p {
+        font-size: 24px;
+    }
+    
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        padding: 20px;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .container {
+        padding-inline: 16px;
+    }
+
+    /* hero section styles */
+    .hero {
+        padding-block: 36px 90px;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust the hero heading size for mobile */
+    .hero-content h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .colored-text {
+        color: var(--primary--color);
+    }
+
+    /* Adjust the hero paragraph for mobile */
+    .hero-content p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .quotes-btn {
+        display: none;
+    }
+
+
+    /* overview container styles */
+.overview-container {
+    padding: 40px;
+}
+
+.overview-heading {
+    padding-bottom: 40px;
+}
+
+.overview-heading h1,
+p {
+    text-align: center;
+}
+
+.overview-heading h1 {
+    padding-bottom: 16px;
+}
+
+.overview-cards {
+    flex-direction: column;
+    gap: 24px;
+}
+.overview-content {
+    padding: 24px;
+}
+
+.overview-cards .overview-img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* highlights styles */
+.highlights-cards {
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.highlights-cards .scope {
+    border-radius: 12px;
+    background: #E6E6F9;
+    padding: 40px 24px;
+}
+
+.highlights-cards .challenges {
+    border-radius: 12px;
+    background: #FCE7F2;
+    padding: 40px 24px;
+}
+
+.highlights-cards .outcome {
+    border-radius: 12px;
+    background: #E8F1F3;
+    padding: 40px 24px;
+}
+
+.icon-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+
+
+.icon-header h2 {
+    color: var(--Text-Heading, #1E1E1E);
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 164%;
+    text-transform: capitalize;
+}
+
+}
